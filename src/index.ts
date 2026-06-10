@@ -31,8 +31,8 @@ function calcularTotal(id:string, cantidadNum:number, codigoDescuento:string):nu
     TIC10: 0.10, TIC20: 0.20, DARIO: 0.50,
   };
 
-  const precioBase = precios[id] ?? 0;
-  const descuento = codigoDescuento ? (descuentos[codigoDescuento] ?? 0) : 0;
+  const precioBase = precios[id];
+  const descuento = codigoDescuento ? (descuentos[codigoDescuento]) : 0;
 
   return precioBase * cantidadNum * (1 - descuento);
 }
